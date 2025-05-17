@@ -33,15 +33,44 @@ except:
     batata= canvas.create_image(x_centro, y_centro, image=potato_photo, anchor=NW)
 
 
+
 def flutuar():
         global contador  
         y = y_centro + 20 * math.sin(contador/10)
         canvas.coords(batata, x_centro, y)
         janela.after(50, flutuar)
         contador += 1
+def abrirPopUp():
+    popup = Toplevel(janela)
+    popup.title("Digite seu código místico")
+    popup.geometry("300x150")
+    popup.transient(janela)  # Mantém o pop-up acima da janela principal
+    popup.grab_set()         # Foca no pop-up até que ele seja fechado
 
+    Label(popup, text="Insira uma seu código:").pack(pady=10)
+    entrada = Entry(popup, width=30)
+    entrada.pack(pady=5)
+    entrada.get()
+
+    def confirmar():
+         entrada.get()
+         entrada.destroy
+   
+    Button(popup, text="Confirmar", command=confirmar).pack(pady=10)
+
+botao = Button(janela, text="Invocar código", command=abrirPopUp)
+botao.place(x=20, y=20)
 contador =0    
 flutuar()
 
-
 janela.mainloop()
+
+# janelinha = Toplevel()
+# janelinha.title("código")
+# janelinha.geometry("300x300")
+# janelinha.mainloop
+
+
+
+
+
