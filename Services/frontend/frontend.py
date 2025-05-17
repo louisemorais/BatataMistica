@@ -27,7 +27,7 @@ try:
     potato_w, potato_h = potato_img.size
     x_centro = (largura_janela - potato_w) // 2
     y_centro = (altura_janela - potato_h) // 2
-    canvas.create_image(x_centro, y_centro, image=potato_photo, anchor=NW)
+    batata=canvas.create_image(x_centro, y_centro, image=potato_photo, anchor=NW)
 except:
     bg_img = Image.open("assets/space.jpg").resize((largura_janela, altura_janela))
     bg_photo = ImageTk.PhotoImage(bg_img)
