@@ -7,7 +7,7 @@ import re
 class ChutesAILLM(LLM):
     token: str = Field(default="")
 
-    def _call(self, prompt: str) -> str: #Chamada LLM
+    def _call(self, prompt: str, stop: list[str] = None,**kwargs) -> str: #Chamada LLM
         # Verifica se o token foi fornecido
             response = requests.post(
                 "https://llm.chutes.ai/v1/chat/completions",
