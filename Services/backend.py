@@ -1,8 +1,6 @@
-from astAnaliser import analisar_codigo
 from ChutesAILLM import ChutesAILLM
 from ChutesAILLM import limparresposta
 import os
-from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
 from tts import speak
 
