@@ -1,5 +1,6 @@
 from tkinter import *
 from PIL import Image, ImageTk
+import math
 
 janela= Tk()
 janela.title("batata mística")
@@ -40,6 +41,17 @@ except:
     potato_w, potato_h = potato_img.size
     x_centro = (largura_janela - potato_w) // 2
     y_centro = (altura_janela - potato_h) // 2
-    canvas.create_image(x_centro, y_centro, image=potato_photo, anchor=NW)
+    batata= canvas.create_image(x_centro, y_centro, image=potato_photo, anchor=NW)
+
+    def flutuar():
+        global contador  
+        y = y_centro + 20 * math.sin(contador/10)
+        canvas.coords(batata, x_centro, y)
+        janela.after(50, flutuar)
+        contador += 1
+
+    contador =0    
+    flutuar()
+
 
 janela.mainloop()
