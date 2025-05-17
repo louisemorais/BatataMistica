@@ -14,12 +14,18 @@ pos_y = (altura_tela // 2) - (altura_janela // 2)
 janela.geometry(f"{largura_janela}x{altura_janela}+{pos_x}+{pos_y}")
 
 
-background =ImageTk.PhotoImage(Image.open("space.jpg"))
-batata=ImageTk.PhotoImage(Image.open(file="potato.png"))
+bg_img = Image.open("space.jpg").resize((largura_janela, altura_janela))
+bg_photo = ImageTk.PhotoImage(bg_img)
+canvas = Canvas(janela, width=largura_janela, height=altura_janela)
+canvas.pack(fill="both", expand=True)
+canvas.create_image(0, 0, image=bg_photo, anchor=NW)
 
-Label(janela,image=background)
-
+# Carregar e centralizar a batata
+potato_img = Image.open("potato.png")
+potato_photo = ImageTk.PhotoImage(potato_img)
+potato_w, potato_h = potato_img.size
+x_centro = (largura_janela - potato_w) // 2
+y_centro = (altura_janela - potato_h) // 2
+canvas.create_image(x_centro, y_centro, image=potato_photo, anchor=NW)
 
 janela.mainloop()
-
-
