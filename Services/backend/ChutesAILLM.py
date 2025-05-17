@@ -6,6 +6,8 @@ import asyncio
 import json
 import ssl
 
+from Services.backend.tts import speak
+
 
 def limparresposta(resposta: str) -> str:
     return re.sub(r"<think>.*?</think>", "", resposta, flags=re.DOTALL).strip()
@@ -13,7 +15,9 @@ def limparresposta(resposta: str) -> str:
 class ChutesAILLM:
 
     def __init__(token: str, message: str):
-        asyncio.run(ChutesAILLM.invoke_chute(token, message))
+        x = ChutesAILLM.invoke_chute(token, message)
+        asyncio.run(x)
+
 
     @staticmethod
     async def invoke_chute(token,message):
@@ -69,4 +73,5 @@ class ChutesAILLM:
                             full_response += chunk_json["choices"][0]["delta"]["content"]
                     except Exception as e:                        continue
         print(limparresposta(full_response))
+        speak(limparresposta(full_response))
 

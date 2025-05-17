@@ -14,6 +14,7 @@ def speak(text):
             break
 
     # Define a taxa de fala
+    voice.setProperty('age', 6)
     voice.setProperty('rate', 200)
 
     # Fala o texto
