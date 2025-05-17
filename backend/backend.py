@@ -1,11 +1,8 @@
-from Services.backend.ChutesAILLM import ChutesAILLM
+from backend.ChutesAILLM import ChutesAILLM
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
-
-
-dados= str(input("Cole ou escreva seu código python aqui para a batata avaliar: "))
 
 token = os.environ.get("API_KEY")
 
@@ -18,6 +15,3 @@ prompt = (
 
 def invocar_batata(codigo: str) -> str:
     ChutesAILLM.__init__(token=token, message=prompt.format(analise=codigo))
-
-
-invocar_batata(codigo=dados)

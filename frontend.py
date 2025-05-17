@@ -2,7 +2,7 @@ from tkinter import *
 from PIL import Image, ImageTk
 import math
 
-from Services.backend.backend import invocar_batata
+from backend.backend import invocar_batata
 
 janela = Tk()
 janela.title("batata mística")
@@ -79,12 +79,5 @@ contador = 0
 flutuar()
 
 janela.mainloop()
-
-# janelinha = Toplevel()
-# janelinha.title("código")
-# janelinha.geometry("300x300")
-# janelinha.mainloop
-
-
 
 
