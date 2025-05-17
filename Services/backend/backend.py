@@ -1,8 +1,6 @@
-from ChutesAILLM import ChutesAILLM
-from ChutesAILLM import limparresposta
+from Services.backend.ChutesAILLM import ChutesAILLM
 import os
 from dotenv import load_dotenv
-from tts import speak
 
 load_dotenv()
 

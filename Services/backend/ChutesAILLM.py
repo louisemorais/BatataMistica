@@ -6,7 +6,7 @@ import asyncio
 import json
 import ssl
 
-from tts import speak
+from Services.backend.tts import speak
 
 
 def limparresposta(resposta: str) -> str:
