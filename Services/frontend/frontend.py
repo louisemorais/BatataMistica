@@ -43,15 +43,16 @@ except:
     y_centro = (altura_janela - potato_h) // 2
     batata= canvas.create_image(x_centro, y_centro, image=potato_photo, anchor=NW)
 
-    def flutuar():
+
+def flutuar():
         global contador  
         y = y_centro + 20 * math.sin(contador/10)
         canvas.coords(batata, x_centro, y)
         janela.after(50, flutuar)
         contador += 1
 
-    contador =0    
-    flutuar()
+contador =0    
+flutuar()
 
 
 janela.mainloop()
