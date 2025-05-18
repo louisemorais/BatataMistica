@@ -4,9 +4,17 @@
   <img src="assets/batata_gif.mp4.gif" width="300" height="240" alt="GIF da Batata Mística">
 </p>
 
-[![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
-[![Made with ♥](https://img.shields.io/badge/Made%20with-%E2%99%A5-red)](#)
+<p align="center">
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" alt="Python">
+  </a>
+  <a href="https://choosealicense.com/licenses/mit/">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License">
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Made%20with-%E2%99%A5-red" alt="Made with Love">
+  </a>
+</p>
 
 A **Batata Mística Flutuante** é uma aplicação esotérica que analisa o seu código e faz comentários poéticos e enigmáticos sobre ele.  
 Ela é alimentada por uma IA (via [chutes.ai](https://chutes.ai/)) com o modelo **DeepSeek**, e traz à tona mensagens transcendentes sobre o seu estilo de programação.
