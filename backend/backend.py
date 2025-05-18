@@ -15,4 +15,3 @@ prompt = (
 
 def invocar_batata(codigo: str) -> str:
     ChutesAILLM.__init__(token=token, message=prompt.format(analise=codigo))
-    print(codigo +  "codeeeee")

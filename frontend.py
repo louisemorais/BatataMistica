@@ -51,7 +51,6 @@ def flutuar():
     
 def rodar_backend(codigo):
     invocar_batata(codigo)
-    print(codigo)
 
 def abrirPopUp():
     popup = Toplevel(janela)
