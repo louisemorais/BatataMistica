@@ -73,9 +73,21 @@ Um botão aparecerá no canto superior esquerdo. Clique nele, cole seu código P
 A batata pensará profundamente, depois comentará seu código com palavras mágicas (pode levar alguns segundos).
 
 ## 👨‍💼 Desenvolvedores
+<a href="https://github.com/louisemorais">
+  <img src="https://github.com/louisemorais.png" width="100px" style="border-radius: 50%;" alt="Louise Morais"/>
+  <br />
+  <sub><b>Louise Morais</b></sub>
+</a>
 
-* [Louise Morais](https://github.com/louisemorais)
-* [Gabriel Detoffel](https://github.com/GabrielDetoffel)
+<br />
+<br>
+
+<a href="https://github.com/onmikronDev">
+  <img src="https://github.com/onmikronDev.png" width="100px" style="border-radius: 50%;" alt="Gabriel Detoffel"/>
+  <br />
+  <sub><b>Gabriel Detoffel</b></sub>
+</a>
+
 
 ## 📚 Licença
 
