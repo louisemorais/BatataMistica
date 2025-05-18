@@ -1,5 +1,6 @@
 from tkinter import *
 from PIL import Image, ImageTk
+import threading
 import math
 
 from backend.backend import invocar_batata
@@ -53,6 +54,9 @@ def flutuar():
     janela.after(50, flutuar)
     contador += 1
 
+    
+def rodar_backend(codigo):
+    invocar_batata(codigo)
 
 def abrirPopUp():
     popup = Toplevel(janela)
@@ -64,20 +68,20 @@ def abrirPopUp():
     Label(popup, text="Insira uma seu código:").pack(pady=10)
     entrada = Entry(popup, width=30)
     entrada.pack(pady=5)
-    entrada.get()
+    dados= entrada.get()
 
     def confirmar():
-        invocar_batata(entrada.get())
+        threading.Thread(target=rodar_backend, args=(dados,), daemon=True).start()
         popup.destroy()
 
     Button(popup, text="Confirmar", command=confirmar).pack(pady=10)
-
 
 botao = Button(janela, text="Invocar código", command=abrirPopUp)
 botao.place(x=20, y=20)
 contador = 0
 flutuar()
 
+bg_img_original= bg_img
+
+
 janela.mainloop()
-
-
