@@ -73,21 +73,7 @@ Um botão aparecerá no canto superior esquerdo. Clique nele, cole seu código P
 A batata pensará profundamente, depois comentará seu código com palavras mágicas (pode levar alguns segundos).
 
 ## 👨‍💼 Desenvolvedores
-<a href="https://github.com/louisemorais">
-  <img src="https://github.com/louisemorais.png" width="100px" style="border-radius: 50%;" alt="Louise Morais"/>
-  <br />
-  <sub><b>Louise Morais</b></sub>
-</a>
-
-<br />
-<br>
-
-<a href="https://github.com/onmikronDev">
-  <img src="https://github.com/onmikronDev.png" width="100px" style="border-radius: 50%;" alt="Gabriel Detoffel"/>
-  <br />
-  <sub><b>Gabriel Detoffel</b></sub>
-</a>
-
+<table> <tbody> <tr> <td align="center" valign="top" width="14.28%"> <a href="https://github.com/louisemorais"> <img src="https://github.com/louisemorais.png" width="100px;" alt="Louise Morais"/><br /> <sub><b>Louise Morais</b></sub> </a><br /> <a href="https://www.linkedin.com/in/louise-morais-75533427a"> <img style="margin-top: 12px" src="https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"> </a> </td> <td align="center" valign="top" width="14.28%"> <a href="https://github.com/onmikronDev"> <img src="https://github.com/onmikronDev.png" width="100px;" alt="Gabriel Detoffel"/><br /> <sub><b>Gabriel Detoffel</b></sub> </a><br /> <a href="https://www.linkedin.com/in/gabriel-detoffel/"> <img style="margin-top: 12px" src="https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"> </a> </td> </tr> </tbody> </table>
 
 ## 📚 Licença
 
