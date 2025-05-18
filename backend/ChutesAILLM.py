@@ -7,10 +7,6 @@ import ssl
 
 from backend.tts import speak
 
-
-def limparresposta(resposta: str) -> str:
-    return re.sub(r"<think>.*?</think>", "", resposta, flags=re.DOTALL).strip()
-
 class ChutesAILLM:
 
     def __init__(token: str, message: str):
@@ -19,9 +15,8 @@ class ChutesAILLM:
 
 
     @staticmethod
-    async def invoke_chute(token,message):
+    async def invoke_chute(token,message): # invocar a api do chutes
         api_token = token
-
 
         headers = {
             "Authorization": "Bearer " + api_token,
@@ -62,15 +57,19 @@ class ChutesAILLM:
                         break
                     try:
                         chunk_json = json.loads(data)
-                        # Verifica se existe a estrutura esperada
                         if (
                             "choices" in chunk_json and
                             len(chunk_json["choices"]) > 0 and
                             "delta" in chunk_json["choices"][0] and
                             "content" in chunk_json["choices"][0]["delta"]
                         ):
-                            full_response += chunk_json["choices"][0]["delta"]["content"]
-                    except Exception as e:                        continue
-        print(limparresposta(full_response))
-        speak(limparresposta(full_response))
+                            full_response += chunk_json["choices"][0]["delta"]["content"] # acumula a resposta por que envia tudo separado
+                    except Exception as e:
+                        continue
+        string = limparresposta(full_response)
+        print(string)
+        speak(string)
 
+
+def limparresposta(resposta: str) -> str:
+    return re.sub(r"<think>.*?</think>", "", resposta, flags=re.DOTALL).strip()
