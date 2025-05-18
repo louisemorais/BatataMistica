@@ -1,5 +1,5 @@
 # Batata Mística
-![batata-mistica](assets/png_da_batata.png)
+![batata-mistica](assets/png_da_batata.png = 250x)
 
 A batata mística ela falará sobre seu codigo se forma poética e comentar sobre.
 
