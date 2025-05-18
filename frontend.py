@@ -4,6 +4,7 @@ import threading
 import math
 
 from backend.backend import invocar_batata
+from backend.tts import speak
 
 janela = Tk()
 janela.title("batata mística")
@@ -50,6 +51,7 @@ def flutuar():
     
 def rodar_backend(codigo):
     invocar_batata(codigo)
+    print(codigo)
 
 def abrirPopUp():
     popup = Toplevel(janela)
@@ -58,12 +60,12 @@ def abrirPopUp():
     popup.transient(janela)  # Mantém o pop-up acima da janela principal
     popup.grab_set()  # Foca no pop-up até que ele seja fechado
 
-    Label(popup, text="Insira uma seu código:").pack(pady=10)
+    Label(popup, text="Insira seu código:").pack(pady=10)
     entrada = Entry(popup, width=30)
     entrada.pack(pady=5)
-    dados= entrada.get()
 
     def confirmar():
+        dados = entrada.get()
         threading.Thread(target=rodar_backend, args=(dados,), daemon=True).start()
         popup.destroy()
 
